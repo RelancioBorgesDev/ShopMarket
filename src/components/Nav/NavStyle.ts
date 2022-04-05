@@ -37,23 +37,10 @@ const Button = styled.button`
     align-items: center; 
 `
 
-const ContagemItems = styled.span`
-    position: absolute;
-    left: -5px;
-    bottom: -5px;
-    font-size: 0.5rem;
-    border-radius: 50%;
-    background-color: ${corContagem};
-    padding: 0.2rem;
-    color: ${corIcones};
-    font-weight: 700;
-`
-
 export {
     Nav,
     Button,
     Titulo,
     SpanTitulo,
-    ContagemItems,
     
 }

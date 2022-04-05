@@ -1,21 +1,7 @@
 import React from "react";
-import {
-  Nav,
-  Button,
-  Titulo,
-  SpanTitulo,
-  ContagemItems,
-  SideMenu,
-  ListaSideMenu,
-  ExitButton,
-  SideContainer,
-} from "./NavStyle";
-import {
-  AiOutlineShoppingCart,
-  AiOutlineMenu,
-  AiOutlineFullscreenExit,
-} from "react-icons/ai";
-import Link from "next/link";
+import { Nav, Button, Titulo, SpanTitulo } from "./NavStyle";
+import { AiOutlineMenu } from "react-icons/ai";
+import Cart from "../Cart";
 
 const Navbar = () => {
   return (
@@ -28,12 +14,7 @@ const Navbar = () => {
         Shop<SpanTitulo>Market</SpanTitulo>
       </Titulo>
 
-      <Link href='#' passHref>
-        <Button>
-          <AiOutlineShoppingCart />
-          <ContagemItems>0</ContagemItems>
-        </Button>
-      </Link>
+      <Cart />
     </Nav>
   );
 };
