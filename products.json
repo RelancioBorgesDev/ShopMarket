@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "/nescau.webp",
+      "nome": "Achocolatado Nescau Lata 400g",
+      "preco": "4.49",
+      "qtd": 40
+    },
+    {
+      "id": 2,
+      "nome": "Banana Orgânica Prata 1Kg",
+      "image": "/banana.jpg",
+      "preco": "2.50",
+      "qtd": 55
+    },
+    {
+      "id": 3,
+      "image": "/arroz.jpg",
+      "nome": "Arroz Agulhinha Tipo 1 CAMIL Pacote 5kg",
+      "preco": "22.99",
+      "qtd": 20
+    },
+    {
+      "id": 4,
+      "image": "/feijao.jpg",
+      "nome": "Feijão Carioca Tipo 1 CAMIL Pacote 1kg",
+      "preco": "8.29",
+      "qtd": 35
+    }
+  ]
+}

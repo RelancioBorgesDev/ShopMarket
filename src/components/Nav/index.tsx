@@ -15,6 +15,7 @@ const Navbar = () => {
       </Titulo>
 
       <Cart />
+      
     </Nav>
   );
 };

@@ -31,6 +31,7 @@ const Button = styled.button`
     background: transparent;
     border: none;
     color: ${corIcones};
+    border-radius: 0.5rem;
     font-size: 1.5rem;
 
     display: flex;

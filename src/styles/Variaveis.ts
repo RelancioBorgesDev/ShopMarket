@@ -5,8 +5,7 @@ const itemFundo = "#95ABCA";
 const corFundo = "#377B68";
 const corTitulo = "#FFF";
 const corContagem = "#2222";
-;
-
+const corBtn = "#16793B";
 
 
 
@@ -17,5 +16,6 @@ export {
     corFundo,
     corTitulo,
     corContagem,
+    corBtn
     
 }
