@@ -2,6 +2,7 @@ import React from "react";
 import { Nav, Button, Titulo, SpanTitulo } from "./NavStyle";
 import { AiOutlineMenu } from "react-icons/ai";
 import CartButton from "../CartButton";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -11,10 +12,12 @@ const Navbar = () => {
       </Button>
 
       <Titulo>
-        Shop<SpanTitulo>Market</SpanTitulo>
+        <Link href="/" passHref>
+          <a>Shop<SpanTitulo>Market</SpanTitulo></a> 
+        </Link>
       </Titulo>
 
-      <CartButton />
+      <CartButton/>
       
     </Nav>
   );

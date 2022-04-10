@@ -68,6 +68,7 @@ const BtnAddCart = styled.button`
     color: #fff;
     border-radius: 0.2rem;
     border: none;
+    cursor: pointer;
 
     display: flex;
     align-items: center;

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import {
   Container,
@@ -10,10 +10,13 @@ import {
   Valor,
 } from "./Item";
 import api from "../../services/api";
-import { IProduto } from "../../types/Produto";
-import { useSelector } from "react-redux";
+import { IProduto } from "../../types/ProdutoTypes";
+import { useDispatch } from "react-redux";
+import { addProdutoCart } from "../../store/modules/cart/actions";
+
 
 const Produto = () => {
+  const dispatch = useDispatch()
   const [catalogo, setCatalogo] = useState<IProduto[]>([]);
   
 
@@ -23,19 +26,23 @@ const Produto = () => {
     });
   }, []);
 
+  const handleAddProduto = useCallback((produto: IProduto) =>{
+    dispatch(addProdutoCart(produto))
+  },[dispatch])
+
   return (
     <>
-      {catalogo.map(({ id, image, nome, preco, qtd }) => (
-        <Container key={id}>
-          <Image src={image} alt='' width={150} height={150} />
-          <NomeProduto>{nome}</NomeProduto>
-          <Preco>R${preco}</Preco>
+      {catalogo.map((produto) => (
+        <Container key={produto.id}>
+          <Image src={produto.image} alt='' width={150} height={150} />
+          <NomeProduto>{produto.nome}</NomeProduto>
+          <Preco>R${produto.preco}</Preco>
           <Quantidade>
             <OpcaoQuantidade>-</OpcaoQuantidade>
-            <Valor>{qtd}</Valor>
+            <Valor>{produto.qtd}</Valor>
             <OpcaoQuantidade>+</OpcaoQuantidade>
           </Quantidade>
-          <BtnAddCart>COMPRAR</BtnAddCart>
+          <BtnAddCart onClick={() => handleAddProduto(produto)}>COMPRAR</BtnAddCart>
         </Container>
       ))}
     </>
