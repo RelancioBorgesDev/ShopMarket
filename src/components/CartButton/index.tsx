@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { ContagemItems } from "./CartStyle";
 import { Button } from "./CartStyle";
 
-const Cart = () => {
+const CartButton = () => {
   return (
     <Link href='#' passHref>
       <Button>
@@ -15,4 +15,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default CartButton;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav, Button, Titulo, SpanTitulo } from "./NavStyle";
 import { AiOutlineMenu } from "react-icons/ai";
-import Cart from "../Cart";
+import CartButton from "../CartButton";
 
 const Navbar = () => {
   return (
@@ -14,7 +14,7 @@ const Navbar = () => {
         Shop<SpanTitulo>Market</SpanTitulo>
       </Titulo>
 
-      <Cart />
+      <CartButton />
       
     </Nav>
   );
