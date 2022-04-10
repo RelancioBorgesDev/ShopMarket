@@ -2,6 +2,13 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Navbar from "../components/Nav";
 import { IState } from "../store";
+import {
+  ContainerProduto,
+  NomeProduto,
+  PrecoProduto,
+  QuantidadeProduto,
+  SubTotalProduto,
+} from "../styles/Cart";
 import { ICartItem } from "../types/ProdutoTypes";
 
 export default function Cart() {
@@ -10,13 +17,16 @@ export default function Cart() {
   return (
     <>
       <Navbar />
-      {cart.map((item) => {
-        <div>
-          <h1>{item.produto.nome}</h1>
-          <p>{item.produto.preco}</p>
-          <h1>{(item.produto.preco * item.produto.qtd).toFixed(2)}</h1>
-        </div>;
-      })}
+      {cart.map(({ produto }) => (
+        <ContainerProduto key={produto.id}>
+          <NomeProduto>{produto.nome}</NomeProduto>
+          <PrecoProduto>R${produto.preco}</PrecoProduto>
+          <QuantidadeProduto>Quantidade: {produto.qtd}</QuantidadeProduto>
+          <SubTotalProduto>
+            SubTotal: {(produto.preco * produto.qtd).toFixed(2)}{" "}
+          </SubTotalProduto>
+        </ContainerProduto>
+      ))}
     </>
   );
 }

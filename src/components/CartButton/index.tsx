@@ -20,7 +20,6 @@ const CartButton = () => {
   return (
     <Link href='/Cart' passHref>
       <Button>
-        {console.log(`Cart Qnt ${quantidade}`)}
         <AiOutlineShoppingCart />
         <ContagemItems>{quantidade}</ContagemItems>
       </Button>
